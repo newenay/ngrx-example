@@ -1,4 +1,4 @@
-# NgrxExample
+![NgRx Store](./simple_store.png)
 
 ### 1.) Install store
 
