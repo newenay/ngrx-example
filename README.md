@@ -1,27 +1,35 @@
 # NgrxExample
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
+### 1.) Install store
 
-## Development server
+> With reducer/action ties built in (doesn't work)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`npm install @ngrx/store --save --minimal false`
 
-## Code scaffolding
+> * Create a src/app/reducers folder, unless the statePath flag is provided, 
+in which case this would be created based on the flag.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+> * Create a src/app/reducers/index.ts file with an empty State interface, 
+an empty reducers map, and an empty metaReducers array. This may be created 
+under a different directory if the statePath flag is provided.
 
-## Build
+> * Update your src/app/app.module.ts > imports array with StoreModule.forRoot(reducers, { metaReducers }). 
+If you provided flags then the command will attempt to locate and update module found by the flags.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Auto Store setup also (doesn't work)
 
-## Running unit tests
+`ng generate store State --root --state-path store --module app.module.ts`
+> https://ngrx.io/guide/schematics/store
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+##
 
-## Running end-to-end tests
+### 2.) Just copy rest from this site 😂
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+https://stackblitz.com/angular/xbdxjlqgpyq?
 
-## Further help
+> Install redux-dev tools in chrome
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+> And also within the project
+
+`npm install @ngrx/store-devtools`
+

@@ -1,0 +1,12 @@
+<div class="card">
+    <div>
+        <button id="increment" (click)="increment()" class="btn btn-primary mr-2">Increment</button>
+
+        <h4>
+            Current Count: <code>{{ count$ | async }}</code>
+        </h4>
+
+        <button id="decrement" (click)="decrement()" class="btn btn-primary mr-2">Decrement</button>
+        <button id="reset" (click)="reset()" class="btn btn-primary mr-2">Reset Counter</button>
+    </div>
+</div>
